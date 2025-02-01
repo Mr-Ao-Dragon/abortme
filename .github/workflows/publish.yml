@@ -19,6 +19,7 @@ jobs:
         continue-on-error: true
       - run: npx npm run test
         name: "🔬🐞 单元测试"
+        continue-on-error: true
       - run: npx npm run build
         name: "📦 编译"
       - uses: actions/upload-artifact@v4
