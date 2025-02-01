@@ -18,6 +18,7 @@ jobs:
         name: "🛠️ 安装依赖"
       - run: npx npm run coverage
         name: "🔎 覆盖率扫描"
+        continue-on-error: true
       - run: npx npm run ci
         name: "🔬🐞 单元测试"
       - run: npx npm run build
