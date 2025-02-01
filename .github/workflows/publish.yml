@@ -1,8 +1,6 @@
 on:
   push:
     tags: ["v*"]
-    branches:
-      - "main"
 
 jobs:
   build:
@@ -19,7 +17,7 @@ jobs:
       - run: npx npm run coverage
         name: "🔎 覆盖率扫描"
         continue-on-error: true
-      - run: npx npm run ci
+      - run: npx npm run test
         name: "🔬🐞 单元测试"
       - run: npx npm run build
         name: "📦 编译"
