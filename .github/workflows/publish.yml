@@ -40,4 +40,4 @@ jobs:
         name: "🚅 部署到 cloudflare pages"
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: pages project deploy ./dist --project-name=${{secrets.CF_TARGET}}
+          command: pages deploy ./dist --project-name=${{secrets.CF_TARGET}}
