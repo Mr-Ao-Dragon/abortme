@@ -25,6 +25,7 @@
     "vite": "^6.0.5",
     "vitest": "^3.0.4",
     "vue-tsc": "^2.2.0",
-    "wrangler": "^3.106.0"
+    "wrangler": "^3.106.0",
+    "vite-plugin-robots": "^1.0.5"
   }
 }
