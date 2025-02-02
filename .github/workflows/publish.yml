@@ -1,6 +1,6 @@
 on:
   push:
-    tags: ["v*"]
+    tags: [ "v*" ]
 
 jobs:
   build:
@@ -30,6 +30,8 @@ jobs:
   upload:
     needs: build
     runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{vars.CLOUDFLARE_ACCOUNT_ID}}
     steps:
       - uses: actions/download-artifact@v4
         name: "🚚 下载构建工件"
